@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled, { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./utils/Themes";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar/Index";
+import HeroSection from "./components/HeroSection/Index";
+import Skills from "./components/Skills/Index";
+import Experience from "./components/Experience/Index";
+import Education from "./components/Education/Index";
+import { useState } from "react";
+
+const Body = styled.div`
+  background-color: ${({ theme }) => theme.bg};
+  width: 100%;
+  overflow-x: hidden;
+`;
+
+const Wrapper = styled.div`
+  background: linear-gradient(
+      38.73deg,
+      rgba(204, 0, 187, 0.15) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      141.27deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(0, 70, 209, 0.15) 100%
+    );
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ThemeProvider theme={darkMode?darkTheme:lightTheme}>
+        <BrowserRouter>
+          <Navbar />
+          <Body>
+            <HeroSection />
+            <Wrapper>
+              <Skills />
+              <Experience />
+            </Wrapper>
+            <Wrapper>
+              <Education />
+              <Experience />
+            </Wrapper>
+          </Body>
+        </BrowserRouter>
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
