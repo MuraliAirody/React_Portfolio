@@ -34,7 +34,7 @@ export const Bio = {
         {
           name: "Next Js",
           image:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
+            "https://ih1.redbubble.net/image.5241583874.6759/st,small,507x507-pad,600x600,f8f8f8.jpg",
         },
         {
           name: "HTML",
@@ -135,7 +135,7 @@ export const Bio = {
         {
           name: "Git",
           image:
-            "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+            "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
         },
         {
           name: "GitHub",
@@ -160,7 +160,7 @@ export const Bio = {
         {
           name: "Postman",
           image:
-            "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
+            "https://cdn.worldvectorlogo.com/logos/postman.svg",
         },
         // {
         //   name: "Adobe XD",
@@ -179,7 +179,7 @@ export const Bio = {
   export const experiences = [
     {
       id: 0,
-      img: "https://psa.gov.in/CMS/web/sites/default/files/initiatives/dxc_logo_hz_blk_rgb-XXSML.png",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK7Jsg4id9AjOnSQ0ygCEC68dYsI2TFHpl_-Yiod76TA&s",
       role: "Java Developer",
       company: "DXC Technology",
       date: "Oct 2021 - Present",
@@ -198,8 +198,8 @@ export const Bio = {
       doc: "",
     },
     {
-      id: 0,
-      img: "",
+      id: 1,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ls9VQFGfmpRJZvThb_-qvPjBMDeVAsrHbZmVa12jPw&s",
       role: "Java FullStack Intern",
       company: "JSpider",
       date: "August 2021 - May 2022",
@@ -239,7 +239,7 @@ export const Bio = {
   
   export const projects = [
     {
-      id: 9,
+      id: 1,
       title: "LeetCode Clone",
       date: "Dec 2023 - Mar 2023",
       description:
@@ -261,7 +261,7 @@ export const Bio = {
       webapp: "",
     },
     {
-      id: 1,
+      id: 2,
       title: "E-Commerce Website",
       date: "Jul 2023 - Dec 2023",
       description:
@@ -283,7 +283,7 @@ export const Bio = {
       webapp: "",
     },
     {
-      id: 4,
+      id: 3,
       title: "Blog Application",
       date: "Nov 2023",
       description:

@@ -7,6 +7,10 @@ import Skills from "./components/Skills/Index";
 import Experience from "./components/Experience/Index";
 import Education from "./components/Education/Index";
 import { useState } from "react";
+import Projects from "./components/Projects/Index";
+import Contact from "./components/Contact/Index";
+import Footer from "./components/Footer/Index";
+import ProjectDetails from "./components/ProjectDetails/Index";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -31,10 +35,12 @@ const Wrapper = styled.div`
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
+  console.log(openModal);
 
   return (
     <>
-      <ThemeProvider theme={darkMode?darkTheme:lightTheme}>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <BrowserRouter>
           <Navbar />
           <Body>
@@ -43,10 +49,19 @@ function App() {
               <Skills />
               <Experience />
             </Wrapper>
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+
             <Wrapper>
               <Education />
-              <Experience />
+              <Contact />
             </Wrapper>
+            <Footer />
+            {openModal.state && (
+              <ProjectDetails
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            )}
           </Body>
         </BrowserRouter>
       </ThemeProvider>
