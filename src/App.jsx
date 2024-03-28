@@ -42,7 +42,7 @@ function App() {
     <>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <BrowserRouter>
-          <Navbar />
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Body>
             <HeroSection />
             <Wrapper>

@@ -11,13 +11,14 @@ import {
   MobileIcon,
   MobileMenu,
   MobileLink,
+  ToggleButton,
 } from "./NavbarStyleComponent";
 import { DiCssdeck } from "react-icons/di";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaSun, FaMoon } from "react-icons/fa"; // Import sun and moon icons
 import { Bio } from "../../data/constant";
 import { useTheme } from "styled-components";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
 
@@ -35,6 +36,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleModeToggle = () => {
+    setDarkMode(!darkMode); // Toggle darkMode state
+  };
+
   return (
     <Nav>
       <NavbarContainer>
@@ -43,7 +48,7 @@ const Navbar = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            color: "white",
+            color: `${darkMode ? "white" : "#103251"}`,
             marginBottom: "20",
             cursor: "pointer",
           }}
@@ -65,6 +70,12 @@ const Navbar = () => {
             Github Profile
           </GitHubButton>
         </ButtonContainer>
+        <ButtonContainer>
+          <ToggleButton onClick={handleModeToggle}>
+            {darkMode ? <FaSun /> : <FaMoon />} {/* Toggle sun and moon icons */}
+            {darkMode ? " Light Mode" : " Dark Mode"}
+          </ToggleButton>
+        </ButtonContainer>
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <MobileLink href="#about" onClick={() => setIsOpen(!isOpen)}>
@@ -82,6 +93,13 @@ const Navbar = () => {
             <MobileLink href="#education" onClick={() => setIsOpen(!isOpen)}>
               Education
             </MobileLink>
+              <ToggleButton style={{
+                
+                width: "max-content",
+              }} onClick={handleModeToggle}>
+                {darkMode ? <FaSun /> : <FaMoon />} {/* Toggle sun and moon icons */}
+                {darkMode ? " Light Mode" : " Dark Mode"}
+              </ToggleButton>
             <GitHubButton
               style={{
                 padding: "10px 16px",

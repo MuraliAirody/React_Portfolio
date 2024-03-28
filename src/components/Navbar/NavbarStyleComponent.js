@@ -122,28 +122,6 @@ export const MobileIcon = styled.div`
   }
 `
 
-export const MobileMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  position: fixed;
-  top: 80px;
-  right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  width: calc(100% - 40px); /* Adjusted */
-  padding: 20px; /* Adjusted */
-  background: ${({ theme }) => theme.card_light};
-  transition: right 0.6s ease-in-out;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
-
-  @media screen and (max-width: 768px) {
-    right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  }
-`;
-
 
 export const MobileMenuItems = styled.ul`
   display: flex;
@@ -218,3 +196,49 @@ export const MobileNavLogo = styled(LinkR)`
     padding: 0 0px;
   }
 `;
+
+
+export const MobileMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  position: fixed;
+  top: 80px;
+  right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  width: calc(100% - 40px); /* Adjusted */
+  padding: 20px; /* Adjusted */
+  background: ${({ theme }) => theme.card_light};
+  transition: right 0.6s ease-in-out;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+  z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
+
+  @media screen and (max-width: 768px) {
+    right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+    // padding: 20px 0; /* Adjusted */
+  }
+`;
+
+export const ToggleButton = styled.button`
+  border: none;
+  background-color: transparent;
+  color: ${({ theme }) => theme.text_primary};
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0;
+  margin-left: 20px; /* Adjusted */
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0; /* Adjusted */
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
