@@ -12,7 +12,7 @@ import {
   SubTitle,
   ResumeButton,
 } from "./HeroStyle";
-import ProfilePic from "https://github.com/MuraliAirody/React_Portfolio/tree/main/src/images/ProfilePic.jpg";
+import ProfilePic from "../../images/ProfilePic.jpg";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constant";
 import HeroBgAnimation from "../HeroSectionBgAnimation/Index";
