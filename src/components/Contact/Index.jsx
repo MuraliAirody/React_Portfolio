@@ -134,20 +134,41 @@ const ContactButton = styled.input`
 const Contact = () => {
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [snackBarMessage,setSnackBarMessage] = React.useState("")
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+  
+    // Check if any form field is empty
+    const emptyFields = [];
+    for (let [key, value] of formData.entries()) {
+      if (!value.trim()) {
+        emptyFields.push(key);
+      }
+    }
+  
+    if (emptyFields.length > 0) {
+      const emptyFieldsMessage = `Please fill out the following field(s): ${emptyFields.join(", ")}`;
+      setOpen(true);
+      setSnackBarMessage(emptyFieldsMessage);
+      return; // Don't proceed further if the form is not valid
+    }
+  
+    console.log('Form data is valid, sending email...');
+    // Proceed with sending email
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
         form.current,
-        "SybVGsYS52j2TfLbi"
+        import.meta.env.VITE_EMAIL_JS_PUBLICKEY_ID
       )
       .then(
         (result) => {
           setOpen(true);
+          setSnackBarMessage("Email sent successfully!")
           form.current.reset();
         },
         (error) => {
@@ -155,6 +176,8 @@ const Contact = () => {
         }
       );
   };
+  
+  
 
   return (
     <Container>
@@ -175,8 +198,9 @@ const Contact = () => {
           open={open}
           autoHideDuration={6000}
           onClose={() => setOpen(false)}
-          message="Email sent successfully!"
+          message={snackBarMessage}
           severity="success"
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         />
       </Wrapper>
     </Container>
