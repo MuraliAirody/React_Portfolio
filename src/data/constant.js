@@ -219,7 +219,7 @@ export const Bio = {
   export const education = [
     {
       id: 0,
-      img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
+      img: "https://images.shiksha.com/mediadata/images/1571898437phpZQhmrq.jpeg",
       school: "Dr. Ambedkar Institute of Technology bangalore",
       date: "Jul 2017 - Jul 2021",
       grade: "8.5 CGPA",
@@ -228,7 +228,7 @@ export const Bio = {
     },
     {
       id: 1,
-      img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeq6BUqvZQZQ1plyCwo5jreEYsQFqWjOi9x5wz4-RlyQ&s",
       school: "Viveka PU College Kota Udupi",
       date: "Apr 2015 - Apr 2017",
       grade: "89%",
