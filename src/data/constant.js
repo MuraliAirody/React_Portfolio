@@ -180,7 +180,7 @@ export const Bio = {
     {
       id: 0,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK7Jsg4id9AjOnSQ0ygCEC68dYsI2TFHpl_-Yiod76TA&s",
-      role: "Java Developer",
+      role: "Fullstack Java Developer",
       company: "DXC Technology",
       date: "Oct 2021 - Present",
       desc: "Delving into the intricacies of SpringBoot, I'm focused on crafting efficient REST APIs and understanding how to design applications in a MicroService Architecture. It's an exciting journey of exploration and learning, as I work towards building scalable and robust software solutions.",
@@ -245,7 +245,7 @@ export const Bio = {
       description:
         "I engineered a comprehensive LeetCode clone with advanced features, including Redux for efficient state management, integrated user authentication for secure access, a custom code editor supporting four languages, dynamic discussion features facilitating collaboration, enhanced user communication to foster effective coding practice, all to create a platform promoting collaborative learning and skill development",
       image:
-        "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+        "https://res.cloudinary.com/muralienv/image/upload/v1713375186/PortFolio/LeetCodeClone.png",
       tags: [
         "Node JS",
         "Express",
@@ -267,7 +267,7 @@ export const Bio = {
       description:
         "I developed a full-stack e-commerce website using Spring Boot, PostgreSQL, and React, ensuring robust functionality across backend, database, and frontend components. Employing Tailwind CSS and Material-UI, I incorporated intuitive design elements to enhance user experience and visual appeal. Redux was implemented for efficient state management, facilitating seamless interaction between components and data flow. JPA was utilized for backend data modeling, enabling smooth integration with the PostgreSQL database and ensuring data consistency. Furthermore, I integrated the Razorpay payment gateway for secure and seamless transactions, enhancing the website’s functionality and user convenience. Additionally, I created an admin panel for streamlined management of products and orders, providing comprehensive control over the e-commerce platform’s operations.",
       image:
-        "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+        "https://res.cloudinary.com/muralienv/image/upload/v1713375918/PortFolio/ecommerce.png",
       tags: [
         "React Js",
         "PostgreSQl",
@@ -302,7 +302,7 @@ export const Bio = {
       description:
         "I developed a user-friendly interface with intuitive features for adding, editing, and deleting tasks. Utilizing Redux Toolkit ensured efficient state management, enhancing the application's performance and scalability. The use of modern web technologies like ReactJS facilitated seamless interaction and responsiveness. Additionally, I implemented styling with CSS to enhance the visual appeal and user experience of the application.",
       image:
-        "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
+        "https://res.cloudinary.com/muralienv/image/upload/v1713376926/PortFolio/todo.png",
       tags: ["React Js", "Appwrite", "ReduxToolkit","JavaScript","HTML","CSS"],
       category: "web app",
       github: "https://github.com/MuraliAirody/ToDo_Application",
